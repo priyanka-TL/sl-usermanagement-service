@@ -1,15 +1,15 @@
 FROM node:12
 
-WORKDIR /manage-learn-services/sl-usermanagement-service
+WORKDIR /opt/usermanagement
 
 #copy package.json file
-COPY package.json /manage-learn-services/sl-usermanagement-service
+COPY package.json /opt/usermanagement
 
 #install node packges
 RUN npm install
 
 #copy all files 
-COPY . /manage-learn-services/sl-usermanagement-service
+COPY . /opt/usermanagement
 
 #expose the application port
 EXPOSE 4101
